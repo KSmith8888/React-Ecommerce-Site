@@ -1,0 +1,112 @@
+[
+    {
+        "Name": "Product 1",
+        "Description": "A description of product 1",
+        "Alt": "The alt text for the product 1 image",
+        "File": "The file name of the product 1 image",
+        "Price": 11.99,
+        "Sale": false,
+        "ProdType": "Kitchen",
+        "QuantityPurchased": 0,
+        "SoldOut": false
+    },
+    {
+        "Name": "Product 2",
+        "Description": "A description of product 1",
+        "Alt": "The alt text for the product 1 image",
+        "File": "The file name of the product 1 image",
+        "Price": 25.49,
+        "Sale": true,
+        "ProdType": "Flash Sale",
+        "QuantityPurchased": 0,
+        "SoldOut": false
+    },
+    {
+        "Name": "Product 3",
+        "Description": "A description of product 1",
+        "Alt": "The alt text for the product 1 image",
+        "File": "The file name of the product 1 image",
+        "Price": 112.50,
+        "Sale": false,
+        "ProdType": "Electronics",
+        "QuantityPurchased": 0,
+        "SoldOut": false
+    },
+    {
+        "Name": "Product 4",
+        "Description": "A description of product 1",
+        "Alt": "The alt text for the product 1 image",
+        "File": "The file name of the product 1 image",
+        "Price": 33.15,
+        "Sale": false,
+        "ProdType": "Furniture",
+        "QuantityPurchased": 0,
+        "SoldOut": false
+    },
+    {
+        "Name": "Product 5",
+        "Description": "A description of product 1",
+        "Alt": "The alt text for the product 1 image",
+        "File": "The file name of the product 1 image",
+        "Price": 9.99,
+        "Sale": true,
+        "ProdType": "Flash Sale",
+        "QuantityPurchased": 0,
+        "SoldOut": false
+    },
+    {
+        "Name": "Product 6",
+        "Description": "A description of product 1",
+        "Alt": "The alt text for the product 1 image",
+        "File": "The file name of the product 1 image",
+        "Price": 49.99,
+        "Sale": false,
+        "ProdType": "Kitchen",
+        "QuantityPurchased": 0,
+        "SoldOut": false
+    },
+    {
+        "Name": "Product 7",
+        "Description": "A description of product 1",
+        "Alt": "The alt text for the product 1 image",
+        "File": "The file name of the product 1 image",
+        "Price": 22.25,
+        "Sale": false,
+        "ProdType": "Electronics",
+        "QuantityPurchased": 0,
+        "SoldOut": false
+    },
+    {
+        "Name": "Product 8",
+        "Description": "A description of product 1",
+        "Alt": "The alt text for the product 1 image",
+        "File": "The file name of the product 1 image",
+        "Price": 74.99,
+        "Sale": false,
+        "ProdType": "Kitchen",
+        "QuantityPurchased": 0,
+        "SoldOut": false
+    },
+    {
+        "Name": "Product 9",
+        "Description": "A description of product 1",
+        "Alt": "The alt text for the product 1 image",
+        "File": "The file name of the product 1 image",
+        "Price": 63.29,
+        "Sale": true,
+        "ProdType": "Flash Sale",
+        "QuantityPurchased": 0,
+        "SoldOut": false
+    },
+    {
+        "Name": "Product 10",
+        "Description": "A description of product 1",
+        "Alt": "The alt text for the product 1 image",
+        "File": "The file name of the product 1 image",
+        "Price": 249.00,
+        "Sale": false,
+        "ProdType": "Furniture",
+        "QuantityPurchased": 0,
+        "SoldOut": false
+    }
+]

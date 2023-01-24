@@ -13,7 +13,8 @@ function App() {
     if(localStorage.getItem('cart') !== null) {
       const oldCart = JSON.parse(localStorage.getItem('cart'));
       const oldTotal = JSON.parse(localStorage.getItem('total'));
-      let totalPrice = newProduct.price + parseInt(oldTotal, 10);
+      let totalPrice = newProduct.price + parseFloat(oldTotal);
+      totalPrice = totalPrice.toFixed(2);
       oldCart.forEach((product) => {
         if(newProduct.name === product.name) {
           product.quantity += 1
@@ -32,7 +33,8 @@ function App() {
     }
     const newCart = JSON.parse(localStorage.getItem('cart'));
     setCartItems(newCart);
-    const newTotal = JSON.parse(localStorage.getItem('total'));
+    let newTotal = JSON.parse(localStorage.getItem('total'));
+    newTotal = parseFloat(newTotal).toFixed(2);
     setCartTotal(newTotal);
   }
 
@@ -42,6 +44,7 @@ function App() {
   const [ cartTotal, setCartTotal ] = useState(initialTotal);
   const [ initialProductData, setinitialProductData ] = useState([]);
   const [ currentProductElements, setCurrentProductElements ] = useState([]);
+  const [ isCheckingOut, setIsCheckingOut ] = useState(false);
 
   useEffect(() => {
     fetch('data/product-data.json')
@@ -105,10 +108,22 @@ function App() {
     setCartItems(newCart);
     let newTotal = 0;
     newCart.forEach((item) => {
-      newTotal += (item.price * item.quantity);
+      newTotal += item.price * item.quantity;
     });
+    newTotal = parseFloat(newTotal).toFixed(2);
     localStorage.setItem('total', JSON.stringify(newTotal));
     setCartTotal(newTotal);
+  }
+
+  function initiateCheckout() {
+    setIsCheckingOut(true);
+    setTimeout(() => {
+      localStorage.removeItem('cart');
+      localStorage.removeItem('total');
+      setCartTotal(0);
+      setCartItems([]);
+      setIsCheckingOut(false);
+    }, 1500);
   }
     
   return (
@@ -119,6 +134,8 @@ function App() {
         items={cartItems} 
         handleRemove={removeItem} 
         total={cartTotal}
+        handleCheckout={initiateCheckout}
+        isCheckingOut={isCheckingOut}
       />
       <h2 className="products-heading">Our Products:</h2>
       <Dropdown handleChange={filterProducts}/>
